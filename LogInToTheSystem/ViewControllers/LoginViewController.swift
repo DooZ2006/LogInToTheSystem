@@ -12,31 +12,39 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameValue: UITextField!
     @IBOutlet var passwordValue: UITextField!
     
-    private let userName = "Borodachka"
-    private let userPassword = "Password"
+    private let user = LoginInfo()
+    private let person = Person()
+    private let address = Address()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userValue = userName
+        let tapBarController = segue.destination as! UITabBarController
+        guard let viewControllers = tapBarController.viewControllers else { return }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user.user
+            } else if let userVC = viewController as? UserViewController {
+                userVC.userName = person.name
+                userVC.userSurname = person.surname
+                userVC.userAge = person.age
+                userVC.userCountry = address.country
+                userVC.userCity = address.city
+                userVC.userStreet = address.street
+            }
+        }
     }
 
     @IBAction func logInToTheSystem() {
-        if userNameValue.text == userName {
-            userNameValue.text = userName
-        } else if passwordValue.text == userPassword {
-            passwordValue.text = userPassword
-        } else {
-            passwordValue.text = ""
-            setAlarm(with: "", and: "Invalid User Name or Password")
+        if userNameValue.text != user.user || passwordValue.text != user.password {
+            setAlarm(with: "Ooops", and: "Invalid User Name or Password ")
         }
     }
     
     @IBAction func forgotUserName() {
-        setAlarm(with: "User Name", and: "Your User Name is \(userName)")
+        setAlarm(with: "User Name", and: "Your User Name is \(user.user)")
     }
     
     @IBAction func forgotPassword() {
-        setAlarm(with: "Password", and: "Your Password is \(userPassword)")
+        setAlarm(with: "Password", and: "Your Password is \(user.password)")
     }
     
     @IBAction func unwind(segue: UIStoryboardSegue) {

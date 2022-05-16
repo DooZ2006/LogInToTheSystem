@@ -14,6 +14,8 @@
 		F725C68928311C2400FF2DF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F725C68828311C2400FF2DF8 /* Assets.xcassets */; };
 		F725C68C28311C2400FF2DF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F725C68A28311C2400FF2DF8 /* LaunchScreen.storyboard */; };
 		F725C699283124E500FF2DF8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725C698283124E500FF2DF8 /* WelcomeViewController.swift */; };
+		F725C69B28315BCB00FF2DF8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725C69A28315BCB00FF2DF8 /* UserViewController.swift */; };
+		F725C69D28317EAC00FF2DF8 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F725C69C28317EAC00FF2DF8 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F725C68B28311C2400FF2DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F725C68D28311C2400FF2DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F725C698283124E500FF2DF8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = "../../../../Урок 2.2/WelcomeViewController.swift"; sourceTree = "<group>"; };
+		F725C69A28315BCB00FF2DF8 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = ../../../UserViewController.swift; sourceTree = "<group>"; };
+		F725C69C28317EAC00FF2DF8 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			children = (
 				F725C68328311C2300FF2DF8 /* LoginViewController.swift */,
 				F725C698283124E500FF2DF8 /* WelcomeViewController.swift */,
+				F725C69A28315BCB00FF2DF8 /* UserViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		F725C69728311CDC00FF2DF8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F725C69C28317EAC00FF2DF8 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F725C69D28317EAC00FF2DF8 /* UserInfo.swift in Sources */,
 				F725C68428311C2300FF2DF8 /* LoginViewController.swift in Sources */,
+				F725C69B28315BCB00FF2DF8 /* UserViewController.swift in Sources */,
 				F725C699283124E500FF2DF8 /* WelcomeViewController.swift in Sources */,
 				F725C68028311C2300FF2DF8 /* AppDelegate.swift in Sources */,
 				F725C68228311C2300FF2DF8 /* SceneDelegate.swift in Sources */,

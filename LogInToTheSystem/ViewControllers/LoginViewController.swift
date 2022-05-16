@@ -15,10 +15,12 @@ class LoginViewController: UIViewController {
     private let user = LoginInfo()
     private let person = Person()
     private let address = Address()
+    private let hobby = Hobby()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tapBarController = segue.destination as! UITabBarController
         guard let viewControllers = tapBarController.viewControllers else { return }
+        
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user.user
@@ -29,6 +31,13 @@ class LoginViewController: UIViewController {
                 userVC.userCountry = address.country
                 userVC.userCity = address.city
                 userVC.userStreet = address.street
+            } else if let hobbyVC = viewController as? HobbyViewController {
+                hobbyVC.favoriteActivity = hobby.favoriteActivity
+                hobbyVC.favoriteSport = hobby.favoriteSport
+                hobbyVC.favoriteDish = hobby.favoriteDish
+                hobbyVC.favoriteBook = hobby.favoriteBook
+                hobbyVC.favoriteFilm = hobby.favoriteFilm
+                hobbyVC.favoriteSeries = hobby.favoriteSeries
             }
         }
     }

@@ -16,22 +16,17 @@ class HobbyViewController: UIViewController {
     @IBOutlet var favoriteFilmLabel: UILabel!
     @IBOutlet var favoriteSeriesLabel: UILabel!
     
-    var favoriteActivity = ""
-    var favoriteSport = ""
-    var favoriteDish = ""
-    var favoriteBook = ""
-    var favoriteFilm = ""
-    var favoriteSeries = ""
+    var hobby: LoginInfo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        favoriteActivityLabel.text = favoriteActivity
-        favoriteSportLabel.text = favoriteSport
-        favoriteDishLabel.text = favoriteDish
-        favoriteBookLabel.text = favoriteBook
-        favoriteFilmLabel.text = favoriteFilm
-        favoriteSeriesLabel.text = favoriteSeries
+        favoriteActivityLabel.text = hobby.person.hobby.favoriteActivity
+        favoriteSportLabel.text = hobby.person.hobby.favoriteSport
+        favoriteDishLabel.text = hobby.person.hobby.favoriteDish
+        favoriteBookLabel.text = hobby.person.hobby.favoriteBook
+        favoriteFilmLabel.text = hobby.person.hobby.favoriteFilm
+        favoriteSeriesLabel.text = hobby.person.hobby.favoriteSeries
 
     }
 

@@ -16,22 +16,17 @@ class UserViewController: UIViewController {
     @IBOutlet var userCityLabel: UILabel!
     @IBOutlet var userStreetLabel: UILabel!
     
-    var userName = ""
-    var userSurname = ""
-    var userAge = 0
-    var userCountry = ""
-    var userCity = ""
-    var userStreet = ""
-    
+    var person: LoginInfo!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userNameLabel.text = userName
-        userSurnameLabel.text = userSurname
-        userAgeLabel.text = String(userAge)
-        userCountryLabel.text = userCountry
-        userCityLabel.text = userCity
-        userStreetLabel.text = userStreet
+        userNameLabel.text = person.person.name
+        userSurnameLabel.text = person.person.surname
+        userAgeLabel.text = String(person.person.age)
+        userCountryLabel.text = person.person.address.country
+        userCityLabel.text = person.person.address.city
+        userStreetLabel.text = person.person.address.street
 
     }
     
